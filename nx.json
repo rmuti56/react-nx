@@ -1,34 +1,28 @@
 {
   "implicitDependencies": {
     "workspace.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
-  "affected": {
-    "defaultBase": "master"
-  },
+  "affected": { "defaultBase": "master" },
   "npmScope": "react-app",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
-      }
+      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
     }
   },
   "projects": {
-    "my-app": {
-      "tags": []
-    },
-    "my-app-e2e": {
-      "tags": [],
-      "implicitDependencies": ["my-app"]
-    }
+    "my-app": { "tags": [] },
+    "my-app-e2e": { "tags": [], "implicitDependencies": ["my-app"] },
+    "ui": { "tags": [] },
+    "customer": { "tags": [] },
+    "router": { "tags": [] },
+    "utils": { "tags": [] },
+    "hooks": { "tags": [] },
+    "store": { "tags": [] }
   }
 }
