@@ -2,7 +2,7 @@ import { customerReducer, CUSTOMER_FEATURE_KEY } from '@react-app/customer';
 import {
   authenticationReducer,
   AUTHENTICATION_FEATURE_KEY,
-} from '@react-app/store';
+} from './authentication.slice';
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import { useDispatch } from 'react-redux';
 
@@ -22,4 +22,3 @@ export type RootState = ReturnType<typeof store.getState>;
 
 export type AppDispatch = typeof store.dispatch;
 export const useAppDispatch = () => useDispatch<AppDispatch>();
-

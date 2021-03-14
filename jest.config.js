@@ -6,6 +6,6 @@ module.exports = {
     '<rootDir>/libs/router',
     '<rootDir>/libs/utils',
     '<rootDir>/libs/hooks',
-    '<rootDir>/libs/store',
+    '<rootDir>/libs/store'
   ],
 };

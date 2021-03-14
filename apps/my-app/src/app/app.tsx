@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Ui } from '@react-app/ui';
+import { useSelector } from 'react-redux';
+import { AuthenticationState, RootState } from '@react-app/store';
 
 const StyledApp = styled.div`
   font-family: sans-serif;
@@ -132,9 +134,15 @@ const StyledApp = styled.div`
 `;
 
 export function App() {
-  return <StyledApp>
-    <Ui />
-  </StyledApp>;
+  const { isAuthenticated } = useSelector<RootState, AuthenticationState>(
+    (state) => state.authentication
+  );
+  console.log(isAuthenticated);
+  return (
+    <StyledApp>
+      <Ui />
+    </StyledApp>
+  );
 }
 
 export default App;

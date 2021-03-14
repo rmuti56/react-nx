@@ -1,2 +1,2 @@
 export * from './lib/authentication.slice';
-export * from './lib/store';
+export * from './lib/config-store';

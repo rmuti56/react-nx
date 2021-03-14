@@ -44,7 +44,7 @@ export const authenticationAdapter = createEntityAdapter<AuthenticationEntity>()
 export const fetchAuthentication = createAsyncThunk(
   'authentication/fetchStatus',
   async (userId: string, thunkAPI) => {
-    console.log(userId)
+    console.log(userId);
     /**
      * Replace this with your custom fetch call.
      * For example, `return myApi.getAuthentications()`;
@@ -82,12 +82,14 @@ export const authenticationSlice = createSlice({
           action: PayloadAction<AuthenticationEntity[]>
         ) => {
           authenticationAdapter.setAll(state, action.payload);
+          state.isAuthenticated = true;
           state.loadingStatus = 'loaded';
         }
       )
       .addCase(
         fetchAuthentication.rejected,
         (state: AuthenticationState, action) => {
+          state.isAuthenticated = false;
           state.loadingStatus = 'error';
           state.error = action.error.message;
         }
