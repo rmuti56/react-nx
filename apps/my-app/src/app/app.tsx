@@ -140,6 +140,7 @@ export function App() {
   console.log(isAuthenticated);
   return (
     <StyledApp>
+      <h1>Welcome to my-app!</h1>
       <Ui />
     </StyledApp>
   );

@@ -1,7 +1,7 @@
 const nrwlConfig = require('@nrwl/react/plugins/webpack.js');
 
 module.exports = (config, context) => {
-  nrwlConfig(config);
+  nrwlConfig(config);// use default webpack from nrwl webpack
 
   return {
     ...config,
